@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Evanston Tavern 1893';
+    src: local('Evanston Tavern 1893 Bold Stencil'), local('Evanston-Tavern-1893-Bold-Stencil'),
+        url('EvanstonTavern-1893BoldStencil.woff2') format('woff2'),
+        url('EvanstonTavern-1893BoldStencil.woff') format('woff'),
+        url('EvanstonTavern-1893BoldStencil.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
