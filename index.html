@@ -3,15 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Restoran - Bootstrap Restaurant Template</title>
+    <title>Masala BLVD</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <link rel="stylesheet" href="/lib/animate/animate.css">
+    <link rel="stylesheet" href="lib/animate/animate.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
     <link rel="preload" href="fonts/EvanstonTavern-1893BoldStencil.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <!-- Google Web Fonts -->
@@ -22,8 +21,8 @@
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="fontawesome-free-6.5.2-web/css/all.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
@@ -36,50 +35,55 @@
 </head>
 
 <body>
-  <script>
+<script>
+    // Spinner
+        document.addEventListener('DOMContentLoaded', function () {
+        $('#preloader-container').load('preloader.html');
+    });
 
-
-</script>
+    window.addEventListener('load', function () {
+        var preloaderContainer = document.getElementById('preloader-container');
+        if (preloaderContainer) {
+            preloaderContainer.style.display = 'none';
+        }
+    });</script>
         <!-- Spinner End -->
+<div id="preloader-container"></div>
+
 
 
         <!-- Navbar & Hero Start -->
         <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                <h1 class="text-light m-0"><img src="/img/mblvd_logo.png" alt="Logo" style="height: 100px; margin-right: 10px;">MASALA BLVD</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
-                </div>
-            </nav>
+    <a href="" class="navbar-brand p-0">
+        <h1 class="text-light m-0"><img src="img/mblvd_logo.png" alt="Logo" style="height: 120px; margin-right: 10px;" class="navbar-logo"> <span class="navbar-text">MASALA BLVD</span></h1>
+    </a>
 
-            <div class="container-fluid  py-5 bg-dark hero-header mb-5">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0 pe-4">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="#" class="nav-item nav-link" data-bs-toggle="modal" data-bs-target="#deliveryModal">Order</a>
+            <a href="menu.html" class="nav-item nav-link">Menu</a>
+            <a href="about.html" class="nav-item nav-link">About Us</a>
+            <a href="#contact" class="nav-item nav-link">Contact</a>
+        </div>
+    </div>
+
+</nav>
+
+
+            <div class="container-fluid  pt-5 bg-dark hero-header mb-5">
                 <div class="hero-subheader container-fluid   my-5 py-5">
                     <div class="row align-items-center  g-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+                            <h1 class="display-1 text-white animated slideInLeft">Authentic Indian Street Food of Toronto</h1>
+                            <p class="text-white animated slideInLeft mb-4 pb-2">Delivery & Takeout Available</p>
+
+                            <a href="#delivery" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft" >Order Now!</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                         </div>
@@ -88,43 +92,184 @@
             </div>
         </div>
         <!-- Navbar & Hero End -->
+<div class="container-xxl offer-section wow fadeInUp">
+    <div class="container">
+        <header class="offer-header wow fadeInUp">
+            <h1>Daily Deals</h1>
+        </header>
+        <div class="owl-carousel daily-carousel">
+            <!-- Monday -->
+            <div class="deal-item" id="deal-monday">
+                <div class="deal-text">
+                    <h5>Monday</h5>
+                    <p>Paneer Biryani</p>
+                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                </div>
+            </div>
+            <!-- Tuesday -->
+            <div class="deal-item" id="deal-tuesday">
+                <div class="deal-text">
+                    <h5>Tuesday</h5>
+                    <p>Chicken Curry Rice Bowl</p>
+                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                </div>
+            </div>
+            <!-- Wednesday -->
+            <div class="deal-item" id="deal-wednesday">
+                <div class="deal-text">
+                    <h5>Wednesday</h5>
+                    <p>Vegetable Pulao</p>
+                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                </div>
+            </div>
+            <!-- Thursday -->
+            <div class="deal-item" id="deal-thursday">
+                <div class="deal-text">
+                    <h5>Thursday</h5>
+                    <p>Butter Chicken</p>
+                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                </div>
+            </div>
+            <!-- Friday -->
+            <div class="deal-item" id="deal-friday">
+                <div class="deal-text">
+                    <h5>Friday</h5>
+                    <p>Lamb Korma</p>
+                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                </div>
+            </div>
+            <!-- Saturday -->
+            <div class="deal-item" id="deal-saturday">
+                <div class="deal-text">
+                    <h5>Saturday</h5>
+                    <p>Fish Fry</p>
+                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+
+                </div>
+            </div>
+            <!-- Sunday -->
+            <div class="deal-item" id="deal-sunday">
+                <div class="deal-text">
+                    <h5>Sunday</h5>
+                    <p>Mixed Grill Platter</p>
+                    <div class="price">@ $9.99 Only</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The Popup -->
+ <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <div class="container-xxl offer-section">
+                    <div class="offer-header">
+                        <h2>Daily Deals</h2>
+                    </div>
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-12 col-md-12 offer-item" id="offer-monday-popup">
+                            <div class="offer-text">
+                                <h5>Monday</h5>
+                                <p>Paneer Biryani</p>
+                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 offer-item" id="offer-tuesday-popup">
+                            <div class="offer-text">
+                                <h5>Tuesday</h5>
+                                <p>Chicken Curry Rice Bowl</p>
+                                <div class="price">@ $9.99 Only</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 offer-item" id="offer-wednesday-popup">
+                            <div class="offer-text">
+                                <h5>Wednesday</h5>
+                                <p>Chana Masala Rice Bowl</p>
+                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 offer-item" id="offer-thursday-popup">
+                            <div class="offer-text">
+                                <h5>Thursday</h5>
+                                <p>Pav Bhaji</p>
+                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 offer-item" id="offer-friday-popup">
+                            <div class="offer-text">
+                                <h5>Friday</h5>
+                                <p>Kadhi Pakora Rice Bowl</p>
+                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 offer-item" id="offer-saturday-popup">
+                            <div class="offer-text">
+                                <h5>Saturday</h5>
+                                <p>Rajmah Rice Bowl</p>
+                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 offer-item" id="offer-sunday-popup">
+                            <div class="offer-text">
+                                <h5>Sunday</h5>
+                                <p>Dal Makhani Rice Bowl</p>
+                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+    </div>
 
 
-        <!-- Service Start -->
+
+        <!-- Service Start
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="#chef" class="link-button">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
-                                <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                                <i class="fa fa-3x fa-user-tie  mb-4"></i>
                                 <h5>Master Chefs</h5>
                                 <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                             </div>
                         </div>
+                        </a>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="#menu" class="link-button">
+
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
-                                <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                                <i class="fa fa-3x fa-utensils  mb-4"></i>
                                 <h5>Quality Food</h5>
                                 <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                             </div>
                         </div>
+                        </a>
                     </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
-                                <h5>Online Order</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <a href="#delivery" class="link-button">
+                            <div class="service-item rounded pt-3">
+                                <div class="p-4">
+                                    <i class="fa fa-3x fa-cart-plus  mb-4"></i>
+                                    <h5>Online Order</h5>
+                                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                </div>
                             </div>
+                            </a>
                         </div>
-                    </div>
+
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
-                                <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                                <i class="fa fa-3x fa-headset  mb-4"></i>
                                 <h5>24/7 Service</h5>
                                 <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                             </div>
@@ -133,55 +278,60 @@
                 </div>
             </div>
         </div>
-        <!-- Service End -->
+         Service End -->
 
 
         <!-- About Start -->
-        <div class="container-xxl py-5">
+        <div class="about container-fluid py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/foodpic-1.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/foodpic-1.jpg" loading="lazy">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/foodpic-3.jpg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/foodpic-3.jpg" style="margin-top: 25%;" loading="lazy">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/foodpic-2.jpg">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/foodpic-2.jpg" loading="lazy">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/foodpic-5.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/foodpic-5.jpg" loading="lazy">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                        <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>MASALA BLVD</h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <div class="col-lg-6 col-12 about-container">
+                        <h1 class="mb-4">Welcome to <p class="title">MASALA BLVD</p></h1>
+                        <p class="mb-4 strong-text">At Masala Blvd, we understand the longing for the familiar and comforting tastes of home. Our passion is to bring the vibrant and diverse flavors of Indian street food right here to Toronto, allowing you to savor the same authentic experiences you remember from back home.</p>
+                        <div class="food-item">
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0">
+                                        <span data-toggle="counter-up">1500</span><span>+</span>
+                                    </h1>
                                     <div class="ps-4">
-                                        <p class="mb-0">Years of</p>
-                                        <h6 class="text-uppercase mb-0">Experience</h6>
+                                        <p class="mb-0">Google</p>
+                                        <h6 class="text-uppercase mb-0">Reviews</h6>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0">
+                                        <span data-toggle="counter-up">4.2</span><span>/5</span>
+                                    </h1>
                                     <div class="ps-4">
-                                        <p class="mb-0">Popular</p>
-                                        <h6 class="text-uppercase mb-0">Master Chefs</h6>
+                                        <p class="mb-0">Uber Eats</p>
+                                        <h6 class="text-uppercase mb-0">Rating</h6>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="about.html">Read More</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -190,40 +340,52 @@
 
 
         <!-- Menu Start -->
-        <div class="about container-fluid py-5">
+        <div class="container-fluid py-5" id="menu">
 
             <div class="container">
 
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-                    <h1 class="mb-5">Most Popular Items</h1>
+                    <h1 class="mb-5">WHAT ARE YOU CRAVIN?</h1>
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                                <i class="fa fa-coffee fa-2x text-primary"></i>
+                                <img src="img/burger1.png" alt="Icon" class="icon-img">
                                 <div class="ps-3">
-                                    <small class="text-body">Popular</small>
-                                    <h6 class="mt-n1 mb-0">Breakfast</h6>
+                                    <h6 class="mt-n1 mb-0">Burger</h6>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                                <i class="fa fa-hamburger fa-2x text-primary"></i>
+                                <img src="img/wrap2.png" alt="Icon" class="icon-img">
                                 <div class="ps-3">
-                                    <small class="text-body">Special</small>
-                                    <h6 class="mt-n1 mb-0">Launch</h6>
+                                    <h6 class="mt-n1 mb-0">WRAP</h6>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
+                                <img src="img/momo.png" alt="Icon" class="icon-img">
                                 <div class="ps-3">
-                                    <small class="text-body">Lovely</small>
-                                    <h6 class="mt-n1 mb-0">Dinner</h6>
+                                    <h6 class="mt-n1 mb-0">MOMOS</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-4">
+                                <img src="img/chaat.png" alt="Icon" class="icon-img">
+                                <div class="ps-3">
+                                    <h6 class="mt-n1 mb-0">CHAAT</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-5">
+                                <img src="img/drink1.png" alt="Icon" class="icon-img">
+                                <div class="ps-3">
+                                    <h6 class="mt-n1 mb-0">DRINKS</h6>
                                 </div>
                             </a>
                         </li>
@@ -233,7 +395,7 @@
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;"> -->
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -245,7 +407,6 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -257,7 +418,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -269,7 +430,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -281,7 +442,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -293,7 +454,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -305,7 +466,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -317,7 +478,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -334,7 +495,7 @@
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -346,7 +507,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -358,7 +519,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -370,7 +531,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -382,7 +543,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -394,7 +555,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -406,7 +567,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -418,7 +579,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -434,7 +595,7 @@
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -446,7 +607,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -458,7 +619,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -470,7 +631,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -482,7 +643,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -494,7 +655,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -506,7 +667,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -518,7 +679,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -538,97 +699,81 @@
 
 
         <!-- Reservation Start -->
-        <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row g-0">
-                <div class="col-md-6">
-                    <div class="video">
-                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="/img/D8401334DB60E094BCEB6C15E31AFF94_video_dashinit.mp4" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
-                    </div>
+<div class="modal fade" id="deliveryModal" tabindex="-1" aria-labelledby="deliveryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content container-fluid text-center">
+      <div class="modal-header">
+        <h3 class="modal-title" id="deliveryModalLabel">Order On</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-2">
+          <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+            <a href="https://www.ubereats.com/ca/store/masala-blvd-the-indian-kitchen/f4vF-fO2R9CEjBw_sfX_dg" class="link-button" target="_blank">
+              <div class="service-item rounded pt-3">
+                <div class="p-4 text-center hover-white">
+                  <img src="img/Uber-Eats-Logo.png" alt="Uber Eats" class="img-fluid mb-4" style="height: 100px; width:150px;">
                 </div>
-                <div class="col-md-6 bg-dark d-flex align-items-center">
-                    <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
-                        <h1 class="text-white mb-4">Book A Table Online</h1>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="select1">
-                                          <option value="1">People 1</option>
-                                          <option value="2">People 2</option>
-                                          <option value="3">People 3</option>
-                                        </select>
-                                        <label for="select1">No Of People</label>
-                                      </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+            <a href="https://www.doordash.com/en-AU/store/masala-blvd-toronto-23170416/" class="link-button" target="_blank">
+              <div class="service-item rounded pt-3">
+                <div class="p-4 text-center hover-white">
+                  <img src="img/doordash-logo.jpg" alt="DoorDash" class="img-fluid mb-4" style="height: 120px;">
                 </div>
-            </div>
+              </div>
+            </a>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-xxl py-5" id="delivery">
+    <div class="container text-center">
+        <h1 class="mb-5">Order On</h1>
 
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">TOUR</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- 16:9 aspect ratio -->
-                        <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
+        <div class="row g-4">
+            <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <a href="https://www.ubereats.com/ca/store/masala-blvd-the-indian-kitchen/f4vF-fO2R9CEjBw_sfX_dg" class="link-button" target="_blank">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4 text-center hover-white">
+                            <img src="img/Uber-Eats-Logo.png" alt="Uber Eats" class="img-fluid mb-4" style="max-height: 100px;">
                         </div>
                     </div>
-                </div>
+                </a>
+            </div>
+            <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <a href="https://www.doordash.com/en-AU/store/masala-blvd-toronto-23170416/" class="link-button" target="_blank">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4 text-center hover-white">
+                            <img src="img/doordash-logo.jpg" alt="DoorDash" class="img-fluid mb-4 " style="max-height: 100px;">
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+    </div>
+</div>
+
+
+
         <!-- Reservation Start -->
 
 
         <!-- Team Start -->
-        <div class="container-xxl pt-5 pb-3">
+        <div class="container-xxl pt-5 pb-3" id="chef">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Team Members</h5>
                     <h1 class="mb-5">Our Master Chefs</h1>
                 </div>
                 <div class="row justify-content-center g-4">
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/chef1.jpg" alt="">
+                                <img class="img-fluid" src="img/chef1.jpg" loading="lazy" alt="">
                             </div>
                             <h5 class="mb-0">Yashan</h5>
                             <small>Chef</small>
@@ -642,7 +787,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/chef2.jpg" alt="">
+                                <img class="img-fluid" src="img/chef2.jpg" loading="lazy" alt="">
                             </div>
                             <h5 class="mb-0">Sahil</h5>
                             <small>Chef</small>
@@ -656,7 +801,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="team-item text-center rounded overflow-hidden">
                             <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/chef3.jpg" alt="">
+                                <img class="img-fluid" src="img/chef3.jpg"  loading="lazy" alt="">
                             </div>
                             <h5 class="mb-0">Rajat</h5>
                             <small>Chef</small>
@@ -673,34 +818,27 @@
         <!-- Team End -->
 
 
-        <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+ <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
                 <div class="text-center">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
-                    <h1 class="mb-5">Our Customers Say!!!</h1>
+                    <h1 class="mb-5">Our Greatest Ingredient: Customer Satisfaction</h1>
                 </div>
                 <div class="owl-carousel testimonial-carousel">
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>AMBIENCE: This is a quick takeout place but there are a couple of high tables and chairs to sit in. We dined in, this place doesn’t offer the proper dine in vibe but the restaurant is about serving good street food to which it does all the justice. There is plenty of parking outside the restaurant.
+                        <p>Ordered for 13 people at night and it got ready in 30 mins
+                           And it was delicious</p>
 
-FOOD : We ordered vada pao + chai (masala) combo, dabeli + chai (masala) combo, and kachori channa and loved loved loved everything. Vada pao was my favorite but keep in mind it’s bit on the spicier side (for my tolerance) you can probably ask them to reduce the spice that they add on the bun. I tried Dabeli for the first time and it was fantastic. Channa kachori was so flavorful. I am surely coming back here for the vada pao and will try other items on the menu.
-
-CHAI : It’s a pre mix but it’s damn good, if you prefer getting sugar free, that might not be an option here. In general the sugar level is mild.
-
-SERVICE : all 5 stars for the service</p>
                         <div class="d-flex align-items-center">
 
                             <div class="ps-3">
-                                <h5 class="mb-1">- Archie Jain</h5>
+                                <h5 class="mb-1">- Akshay More</h5>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>The butter chicken and rice were pretty good. You can try a lot of Indian desserts. A lot of parking available. The staff was friendly
-Food: 4/5  |  Service: 5/5  |  Atmosphere: 2/5</p>
+                        <p>The butter chicken and rice were pretty good. You can try a lot of Indian desserts. A lot of parking available. The staff was friendly</p>
                         <div class="d-flex align-items-center">
 
                             <div class="ps-3">
@@ -726,52 +864,67 @@ Vegetarian options: Great munchy options !</p>
         </div>
         <!-- Testimonial End -->
 
-    <div class="container-xxl">
-            <div class="container">
-                <div class="align-items-center">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="mb-5">OUR INSTAGRAM</h1>
-                </div>                                        <div id="instagram-feed-container">
 
-                    <div id="instagram-feed"></div>
-
+<div class="container-xxl">
+    <div class="container">
+        <div class="align-items-center">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-5">OUR INSTAGRAM</h1>
+            </div>
+            <div id="instagram-profile-container">
+                <div id="profile-header">
+                    <div id="profile-pic-container">
+                        <img id="profile-pic" src="img/mblvd_logo.png" alt="Profile Picture">
                     </div>
-
+                    <div id="profile-info">
+                        <h2 id="profile-name">masalablvd</h2>
+                    </div>
+                    <div id="follow-button-container">
+                        <a href="https://www.instagram.com/masalablvd/"><button id="follow-button">Follow</button></a>
+                    </div>
+                </div>
+                <div id="instagram-feed"></div>
             </div>
         </div>
     </div>
-       <div class="container-xxl">
-            <div class="container">
-                <div class="align-items-center">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="mb-5">UPCOMING EVENTS</h1>
-                </div>                                        <div id="calender-feed-container">
+</div>
 
-                                <div id="calendar"></div>
 
-                    </div>
 
-            </div>
-        </div>
+
+        <div class="container-xxl wow fadeInUp text-center pt-5 ">
+                <div  data-wow-delay="0.1s">
+                    <h1 class="mb-5">FIND US</h1> </div>
+                <div class="map-container align-items-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.44423585507!2d-79.52558422434593!3d43.597291256045956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b491bf51d8ca7%3A0x8bd429c8dac6f292!2sMasala%20BLVD%20-%20The%20Indian%20Kitchen!5e0!3m2!1sen!2skw!4v1721078908575!5m2!1sen!2skw"
+
+                        frameborder="0"
+                        style="border:0;"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0">
+                    </iframe>
+                </div>
     </div>
+
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Reservation</a>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Masala BLVD</h4>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="#contact">Contact Us</a>
                         <a class="btn btn-link" href="">Privacy Policy</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>3260 Lake Shore Blvd, Etobicoke, ON</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+1 (416) 259 4440</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>masalablvd.to@gmail.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -781,10 +934,10 @@ Vegetarian options: Great munchy options !</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                        <p>09AM - 09PM</p>
-                        <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>10AM - 08PM</p>
+                        <h5 class="text-light fw-normal">SUNDAY - WEDNESDAY</h5>
+                        <p>10:00 AM - 12:00 AM</p>
+                        <h5 class="text-light fw-normal">THURSDAY - SATURDAY</h5>
+                        <p>10:00 AM - 03:00 AM</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
@@ -802,18 +955,11 @@ Vegetarian options: Great munchy options !</p>
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
 
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                            Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+
+							Designed & Distributed By <a class="border-bottom" href="https://locale-lift.com">Locale Lift</a><br><br>
+
                         </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -836,12 +982,13 @@ Vegetarian options: Great munchy options !</p>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src="js/main.js"></script>
 
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-        <script>
-var myHeaders = new Headers();
+<script>
+
+/* var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 var requestOptions = {
     method: "GET",
@@ -898,38 +1045,9 @@ const displayInstagramFeed = (data) => {
 
 $(document).ready(function() {
     fetchInstagramFeed();
-});
+}); */
 
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
-                },
-                validRange: function(nowDate) {
-                    return {
-                        start: nowDate
-                    };
-                },
-                events: [
-                    { title: 'Event 1', start: '2024-07-15' },
-                    { title: 'Event 2', start: '2024-07-20' },
-                    { title: 'Event 3', start: '2024-08-05' }
-                ],
-                 eventClick: function(info) {
-                    var date = info.event.start;
-                    calendar.changeView('timeGridDay', date);
-                    info.jsEvent.preventDefault(); // prevent browser from following the link
-                }
-            });
-
-            calendar.render();
-        });
     </script>
 </body>
 
