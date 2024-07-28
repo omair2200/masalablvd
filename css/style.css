@@ -193,9 +193,7 @@ body{
     .sticky-top.navbar-dark {
         position: relative;
     }
-    .offer-text p {
-        font-size: 30px;
-    }
+
     .navbar-dark .navbar-collapse {
         margin-top: 15px;
         border-top: 1px solid rgba(255, 255, 255, .1);
@@ -277,6 +275,7 @@ body{
 }
 .offer-text h5 {
     font-size: 35px;
+    color:  #eb511c;
 }
 .offer-text,.deal-text p{
     font-family: 'Evanston Tavern 1893';
@@ -303,8 +302,11 @@ body{
         padding: 10px; /* Reduced padding on mobile */
     }
     .offer-text h5 {
-    font-size: 26px;
+    font-size: 30px;
 }
+    .offer-text p {
+        font-size: 45px;
+    }
 }
 
 
@@ -659,7 +661,23 @@ body{
 .nav-pills .nav-item .active {
     border-bottom: 2px solid var(--primary);
 }
+.nav-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
 
+.nav-pills .nav-item {
+    flex: 0 0 auto;
+}
+
+.nav-pills .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 0;
+}
 
 /*** Youtube Video ***/
 .video {
@@ -788,7 +806,7 @@ body{
 /*** Team ***/
 .team-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    height: calc(100% - 38px);
+    height: calc(100% - 40px);
     transition: .5s;
 }
 
@@ -796,17 +814,18 @@ body{
     transition: .5s;
 }
 
-.team-item:hover img {
+.team-item.in-view img {
     transform: scale(1.1);
 }
 
-.team-item:hover {
+.team-item.in-view {
     height: 100%;
 }
 
 .team-item .btn {
     border-radius: 38px 38px 0 0;
 }
+
 .modal-content{
     background-color: rgba(255,239,223,255);
 }

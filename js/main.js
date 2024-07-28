@@ -145,12 +145,32 @@ window.closePopup = function() {
 $('#popupBtn').click(function() {
     $('#popup').fadeIn();
 });
-window.onload = function() {
-    const accessToken = 'IGQWRQb28xYzJJQzNQdFZAEbWoxVDZAZAS2p1WHNqc1RwS3RKbElkRGpxZAU0zN0tMY081QjVTUnZAEdURBQVBIZAWJscmRNblBXLVpEdGptQ3UzV2djMUNSaU1GbkpRRjFuWHNocG5ld2VhcFRoUnBYQVc1NW1Wa1ludDAZD';
-    const userId = '8549440835070410';
-    const limit = 50; // Increase the limit to fetch more posts initially
 
-    const fetchInstagramFeed = () => {
+document.addEventListener('DOMContentLoaded', function () {
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            } else {
+                entry.target.classList.remove('in-view');
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust the threshold as needed
+    });
+
+    document.querySelectorAll('.team-item').forEach(item => {
+        observer.observe(item);
+    });
+});
+
+window.onload = function() {
+    const accessToken = 'IGQWRQdWw0Skxnb09vbHRFSGdhWHRpRXRSejVpeUt6QXlkTEt3aUE3U0lzQUZA6ZAHZAKQXdoZAGo4bERmQ0F2MzBxa2YwUjFrSVRXQVg0b1lSbEtiRDBPZAWRaUFRoaVhyZAHFxTncxQXZA2YU84T1ZAkRnJ6SEhTbTZAOVEUZD';
+    const userId = '8549440835070410';
+    const limit = 20; // Increase the limit to fetch more posts initially
+    const maxRetries = 3; // Maximum number of retries
+
+    const fetchInstagramFeed = (retries) => {
         const url = `https://graph.instagram.com/${userId}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,children{media_url,media_type}&access_token=${accessToken}&limit=${limit}`;
         console.log('Fetching URL:', url); // Log the URL being fetched
 
@@ -166,7 +186,15 @@ window.onload = function() {
                 console.log('Fetched data:', result); // Log the result to understand the structure
                 displayInstagramFeed(result.data);
             })
-            .catch(error => console.log('Error fetching Instagram posts:', error));
+            .catch(error => {
+                console.log('Error fetching Instagram posts:', error);
+                if (retries > 0) {
+                    console.log(`Retrying... (${maxRetries - retries + 1}/${maxRetries})`);
+                    fetchInstagramFeed(retries - 1);
+                } else {
+                    console.error('Max retries reached. Could not fetch Instagram posts.');
+                }
+            });
     };
 
     const displayInstagramFeed = (data) => {
@@ -210,8 +238,9 @@ window.onload = function() {
         });
     };
 
-    fetchInstagramFeed();
+    fetchInstagramFeed(maxRetries);
 };
+
 
 
 
