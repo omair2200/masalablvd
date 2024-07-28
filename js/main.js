@@ -146,7 +146,7 @@ $('#popupBtn').click(function() {
     $('#popup').fadeIn();
 });
 window.onload = function() {
-    const accessToken = 'IGQWROZAmdhUWZAOakxUXzJxOW1CdWRpSjBZAejJOS0RPT1g2a09aZAWM3N3FsLU4tLWZAFTTd6Sl9CM2l0SnE2UWRpVDFUTnA2SzV3VXFPZAnRzcEJYN1Uybm5TWnBXQ0hoZAkdVNUZAuYkZAkU3hZARnY0Y1NvbldDYnNEazgZD';
+    const accessToken = 'IGQWRQb28xYzJJQzNQdFZAEbWoxVDZAZAS2p1WHNqc1RwS3RKbElkRGpxZAU0zN0tMY081QjVTUnZAEdURBQVBIZAWJscmRNblBXLVpEdGptQ3UzV2djMUNSaU1GbkpRRjFuWHNocG5ld2VhcFRoUnBYQVc1NW1Wa1ludDAZD';
     const userId = '8549440835070410';
     const limit = 50; // Increase the limit to fetch more posts initially
 

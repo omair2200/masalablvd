@@ -112,12 +112,14 @@ body{
     font-weight: 500;
     text-transform: uppercase;
     transition: .5s;
+    border-radius: 10px; /* Adjust the radius as needed */
+
 }
 
 .btn.btn-primary,
 .btn.btn-secondary {
     background-color: #eb511c !important;
-
+    border-radius: 10px; /* Adjust the radius as needed */
     color: #FFFFFF;
 }
 
@@ -253,6 +255,8 @@ body{
     background-color: #eb511c;
     padding: 20px;
     color: white;
+    border-radius: 10px; /* Adjust the radius as needed */
+
 }
 
 .offer-item,.deal-item {
@@ -263,6 +267,7 @@ body{
 }
 .deal-item h5{
     font-size: 35px;
+    color:  #eb511c;
 }
 
 .offer-text,.deal-text {
@@ -277,8 +282,7 @@ body{
     font-family: 'Evanston Tavern 1893';
 }
 .price {
-    color: #ff4c4c;
-    font-size: 1.5rem;
+    color: white;
     font-family: 'Evanston Tavern 1893';
     margin-top: 10px;
 }
@@ -338,6 +342,8 @@ body{
 .order-btn{
     padding: 20px;
     margin: 10px;
+    border-radius: 15px; /* Adjust the radius as needed */
+
 }
 /* Close Button */
 .close-btn {
@@ -534,36 +540,52 @@ body{
 }
 
 /*** Hero Header ***/
-.hero-header {
-    position:relative;
-    background: url(../img/IMG_2809.jpeg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.hero-header img {
-    margin-top: 200px;
-
-    animation: imgRotate 50s linear infinite;
-}
-.hero-header a{
-    padding: 10px;
-    font-size: 30px;
-    font-family: 'Evanston Tavern 1893';
-
-}
-@keyframes imgRotate {
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
     100% {
-        transform: rotate(360deg);
+        transform: scale(1.1);
     }
 }
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 550px; /* Adjust to the desired height of the hero section */
+    overflow: hidden;
+}
+
+.hero-header .carousel-inner {
+    height: 100%;
+}
+
+.hero-header .carousel-item img {
+    height: 100vh; /* Full viewport height */
+    object-fit: cover;
+    animation: zoomIn 10s infinite alternate; /* Adjust the duration to match the carousel interval */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-subheader {
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-subheader .btn-primary {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow to the button */
+}
+
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
@@ -616,6 +638,8 @@ body{
 .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     transition: .5s;
+    border-radius: 20px; /* Adjust the radius as needed */
+
 }
 
 .service-item:hover {
@@ -803,6 +827,8 @@ body{
 .testimonial-carousel .owl-item .testimonial-item,
 .testimonial-carousel .owl-item.center .testimonial-item * {
     transition: .5s;
+    border-radius: 15px; /* Adjust the radius as needed */
+
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {

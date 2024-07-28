@@ -74,28 +74,41 @@
     </div>
 
 </nav>
-
-
-            <div class="container-fluid  pt-5 bg-dark hero-header mb-5">
-                <div class="hero-subheader container-fluid   my-5 py-5">
-                    <div class="row align-items-center  g-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-1 text-white animated slideInLeft">Authentic Indian Street Food of Toronto</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Delivery & Takeout Available</p>
-
-                            <a href="#delivery" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft" >Order Now!</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                        </div>
-                    </div>
+<div id="heroCarousel" class="carousel slide carousel-fade hero-header" data-bs-ride="carousel" data-bs-interval="8000" data-bs-pause="false">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/IMG_2809.jpeg" class="d-block w-100 zoom-animation" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <img src="img/restuarent.jpg" class="d-block w-100 zoom-animation" alt="Slide 2">
+        </div>
+    </div>
+    <div class="hero-overlay container-fluid pt-5">
+        <div class="hero-subheader container-fluid my-5 py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-1 text-white animated slideInLeft">Authentic Indian Street Food In Toronto</h1>
+                    <p class="text-white animated slideInLeft mb-4 pb-2">Delivery & Takeout Available</p>
+                    <a href="#delivery" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Order Now!</a>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                    <!-- Optional content -->
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+
+
         </div>
         <!-- Navbar & Hero End -->
 <div class="container-xxl offer-section wow fadeInUp">
     <div class="container">
         <header class="offer-header wow fadeInUp">
-            <h1>Daily Deals</h1>
+            <h1>Daily Deals <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
+            </h1>
         </header>
         <div class="owl-carousel daily-carousel">
             <!-- Monday -->
@@ -103,7 +116,6 @@
                 <div class="deal-text">
                     <h5>Monday</h5>
                     <p>Paneer Biryani</p>
-                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                 </div>
             </div>
             <!-- Tuesday -->
@@ -111,7 +123,6 @@
                 <div class="deal-text">
                     <h5>Tuesday</h5>
                     <p>Chicken Curry Rice Bowl</p>
-                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                 </div>
             </div>
             <!-- Wednesday -->
@@ -119,7 +130,6 @@
                 <div class="deal-text">
                     <h5>Wednesday</h5>
                     <p>Vegetable Pulao</p>
-                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                 </div>
             </div>
             <!-- Thursday -->
@@ -127,7 +137,6 @@
                 <div class="deal-text">
                     <h5>Thursday</h5>
                     <p>Butter Chicken</p>
-                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                 </div>
             </div>
             <!-- Friday -->
@@ -135,7 +144,6 @@
                 <div class="deal-text">
                     <h5>Friday</h5>
                     <p>Lamb Korma</p>
-                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                 </div>
             </div>
             <!-- Saturday -->
@@ -143,7 +151,6 @@
                 <div class="deal-text">
                     <h5>Saturday</h5>
                     <p>Fish Fry</p>
-                    <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
 
                 </div>
             </div>
@@ -152,7 +159,6 @@
                 <div class="deal-text">
                     <h5>Sunday</h5>
                     <p>Mixed Grill Platter</p>
-                    <div class="price">@ $9.99 Only</div>
                 </div>
             </div>
         </div>
@@ -165,7 +171,7 @@
             <span class="close-btn" onclick="closePopup()">&times;</span>
             <div class="container-xxl offer-section">
                     <div class="offer-header">
-                        <h2>Daily Deals</h2>
+                        <h1>Daily Deals <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div></h1>
                     </div>
                     <div class="row justify-content-center">
 
@@ -173,49 +179,42 @@
                             <div class="offer-text">
                                 <h5>Monday</h5>
                                 <p>Paneer Biryani</p>
-                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 offer-item" id="offer-tuesday-popup">
                             <div class="offer-text">
                                 <h5>Tuesday</h5>
                                 <p>Chicken Curry Rice Bowl</p>
-                                <div class="price">@ $9.99 Only</div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 offer-item" id="offer-wednesday-popup">
                             <div class="offer-text">
                                 <h5>Wednesday</h5>
                                 <p>Chana Masala Rice Bowl</p>
-                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 offer-item" id="offer-thursday-popup">
                             <div class="offer-text">
                                 <h5>Thursday</h5>
                                 <p>Pav Bhaji</p>
-                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 offer-item" id="offer-friday-popup">
                             <div class="offer-text">
                                 <h5>Friday</h5>
                                 <p>Kadhi Pakora Rice Bowl</p>
-                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 offer-item" id="offer-saturday-popup">
                             <div class="offer-text">
                                 <h5>Saturday</h5>
                                 <p>Rajmah Rice Bowl</p>
-                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 offer-item" id="offer-sunday-popup">
                             <div class="offer-text">
                                 <h5>Sunday</h5>
                                 <p>Dal Makhani Rice Bowl</p>
-                                <div class="price">@ <span class="dollar-sign">$</span>9.99 Only</div>
                             </div>
                         </div>
 
@@ -820,11 +819,12 @@
 
  <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
-                <div class="text-center">
-                    <h1 class="mb-5">Our Greatest Ingredient: Customer Satisfaction</h1>
+                <div class="text-center mb-5">
+                    <h3>Our Greatest Ingredient:</h3>
+                    <h1> Customer Satisfaction</h1>
                 </div>
                 <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item bg-transparent border rounded p-4">
+                    <div class="testimonial-item bg-transparent border  p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Ordered for 13 people at night and it got ready in 30 mins
                            And it was delicious</p>
@@ -836,7 +836,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
+                    <div class="testimonial-item bg-transparent border  p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>The butter chicken and rice were pretty good. You can try a lot of Indian desserts. A lot of parking available. The staff was friendly</p>
                         <div class="d-flex align-items-center">
@@ -846,7 +846,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
+                    <div class="testimonial-item bg-transparent border  p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Great taste. Had samosa pav, it was very good. Grilled Patties was damn tasty. And Chai is also very nice.
 
@@ -869,7 +869,7 @@ Vegetarian options: Great munchy options !</p>
     <div class="container">
         <div class="align-items-center">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-5">OUR INSTAGRAM</h1>
+                <h2 class="mb-5">Follow us on instagram!</h2>
             </div>
             <div id="instagram-profile-container">
                 <div id="profile-header">
@@ -912,51 +912,56 @@ Vegetarian options: Great munchy options !</p>
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Masala BLVD</h4>
+                        <a href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#deliveryModal">Order</a>
+                        <a class="btn btn-link" href="menu.html">Menu</a>
                         <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="#contact">Contact Us</a>
                         <a class="btn btn-link" href="">Privacy Policy</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>3260 Lake Shore Blvd, Etobicoke, ON</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+1 (416) 259 4440</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>masalablvd.to@gmail.com</p>
+                            <p class="mb-2">
+                                <a href="https://www.google.com/maps/search/?api=1&query=3260+Lake+Shore+Blvd,+Etobicoke,+ON" target="_blank" class="text-decoration-none">
+                                    <i class="fa fa-map-marker-alt me-3"></i>3260 Lake Shore Blvd, Etobicoke, ON
+                                </a>
+                            </p>
+                        <p class="mb-2">
+                            <a href="tel:+14162594440" class="text-decoration-none">
+                                <i class="fa fa-phone-alt me-3"></i>+1 (416) 259 4440
+                            </a>
+                        </p>
+                        <p class="mb-2">
+                            <a href="mailto:masalablvd.to@gmail.com" class="text-decoration-none">
+                                <i class="fa fa-envelope me-3"></i>masalablvd.to@gmail.com
+                            </a>
+                        </p>
+
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/masalablvd/"><i class="fab fa-instagram"></i></a>
+
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
                         <h5 class="text-light fw-normal">SUNDAY - WEDNESDAY</h5>
                         <p>10:00 AM - 12:00 AM</p>
                         <h5 class="text-light fw-normal">THURSDAY - SATURDAY</h5>
                         <p>10:00 AM - 03:00 AM</p>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                            &copy; <a class="border-bottom" href="https://masalablvd.ca/">masalablvd.ca</a>, All Right Reserved.
 
 
-							Designed & Distributed By <a class="border-bottom" href="https://locale-lift.com">Locale Lift</a><br><br>
+							Designed & Distributed By <a class="border-bottom" href="https://locale-lift.com">Locale-Lift.com</a><br><br>
 
                         </div>
 
